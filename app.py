@@ -7,6 +7,29 @@ def main(page: ft.Page):
     FG = "#3450a1"
     PINK = "#eb06ff"
 
+    first_page_contents = ft.Container(
+        content= ft.Column(
+            controls= [
+                ft.Row(alignment="spaceBetween",
+                    controls=[
+                        ft.Container(content= ft.Icon(ft.Icons.MENU)),
+                        ft.Row(
+                            controls=[
+                                ft.Icon(ft.Icons.SEARCH),
+                                ft.Icon(ft.Icons.NOTIFICATIONS_NONE_OUTLINED)
+                            ]
+                        )
+                    ]
+                ),
+                ft.Container(height=20),
+                ft.Text(value="What's up, John! "),
+                ft.Text(value="CATEGORIES"),
+                ft.Container( padding=ft.padding.only(top=20, bottom=20,)
+                             )
+            ]
+        )
+    )
+
     page_1 = ft.Container()
 
     page_2 = ft.Row(
